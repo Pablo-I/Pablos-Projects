@@ -1,0 +1,57 @@
+#PageTitle
+{
+    text-align:center;
+    padding:1px;
+    border:5px solid red;
+    font-size:57px;
+    background:black;
+    color:white;
+}
+
+#Robot
+{
+    text-align:center;
+    opacity:0.7;
+    border:solid white;
+    resize: both;
+    overflow: auto;
+}
+
+summary.sum
+{
+    font: italic small-caps bold 20px Georgia, serif;
+    height:30px;
+    perspective:100px;
+    text-indent:10px;
+    text-decoration:underline;
+
+}
+
+p
+{
+    font: italic small-caps bold 10px Georgia, serif;
+    text-indent:10px;
+    color:magenta;
+    text-align:left;
+    background:white;
+
+}
+
+.footer
+{
+    color:white;
+    text-align:center;
+    font: normal bold 10px Arial, serif;
+    background:black;
+    border:3px solid red;
+}
+
+h5, ol
+{
+    color:black;
+    text-align:left;
+    background:white;
+    border:3px solid white;
+    padding:5px;
+    text-indent:10px;
+}
