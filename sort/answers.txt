@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When using sort1, the first thing that can be noticed is that there is a large difference between the reversed and sorted runtimes. Since Merge Sort and Selection Sort have the same runtimes for the best and worst case scenarios, sort1 must be Bubble Sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: When using sort2, there is little to no difference between the runtimes for the reversed and sorted cases. This means that it must be either Merge Sort or Selection Sort. Now, since sort3 has significantly longer runtimes for both the reversed and sorted cases, sort2 must be Merge Sort (since it is faster than selection sort).
+
+sort3 uses: Selection Sort
+
+How do you know?: When using sort3, there is little to no difference between the runtimes for the reversed and sorted cases. Since the runtimes for both these cases are significantly longer than the ones found in sort2, sort3 must be Selection Sort.
