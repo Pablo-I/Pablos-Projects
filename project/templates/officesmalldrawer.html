@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Office - Small Drawer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-6 mb-4 mt-4"><b>The Professor's Office - Small Desk Drawer</b></h1></center>
+    <center><img src="{{url_for('static', filename='/images/Office/smalldrawer.jpg')}}" alt="Small Drawer" width="1200" height="800" usemap="#smalldrawer"></center>
+    <map name = "smalldrawer">
+        <!--Sticky Note with Synergy's Address-->
+        <area class="default" shape="rect" coords="525,347,600,550" href="{{url_for('synergyaddressnote')}}">
+    </map>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Wow...So many equations and notes. Some organization wouldn't kill the professor. He seems to work overtime; his calculator is extremely worn out and won't turn on. Maybe it needs new batteries?</i></p>
+    </div>
+
+    <center><a href="{{url_for('office')}}">Return to Main Office View</a></center>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cabin - Professor
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>The Professor's Cabin - The Professor</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Cabin/professor.jpg')}}" alt="prof" width="600" height="400"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i> The...He's dead. Looks like he was shot in the head. I can hear a faint sound coming from his phone, it appears to be a voice recording. I can just make out the following words: "Ple--please, whose out there?! What do you want from me? Show yourself! I have no money, no fame, no power; all I have left is...wait...it's you, isn't it Russo! Look, I know we had an agreement but you have to understand, I can't just give up my life's work. Remember, you need me alive to operate it! Where are you, show yoursel--*GUNSHOT*. Retr--". Just before the voice note cuts off, I can here another man utter the letters R-E-T-R. Retr-what? Damn!</i></p>
+    </div>
+
+    <center><a href="{{url_for('cabin')}}">Go Back to Cabin Entrance</a></center>
+{% endblock %}

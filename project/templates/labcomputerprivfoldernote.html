@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Lab/computerprivfoldernote.jpg')}}" alt="note" width="1200" height="800"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Trust no one, trust no one, trust no one. Damn, maybe he finally lost it.</i></p>
+    </div>
+
+    <center><a href="{{url_for('privfolder')}}">Close Notepad</a></center>
+{% endblock %}

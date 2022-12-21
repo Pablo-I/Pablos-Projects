@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Office - Small Drawer - Synergy's Address
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-6 mb-4 mt-4"><b>The Professor's Office - Small Desk Drawer (Synergy's Address)</b></h1></center>
+    <center><img src="{{url_for('static', filename='/images/Office/synergyaddress.jpg')}}" alt="Synergy's Address" width="450" height="400"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Wait minute, I recognize that address. That is where <font color="jade">Synergy is headquartered.</font> I should probably go and check it out once I'm finished with the professor's office.</i></p>
+    </div>
+
+    <center><a href="{{url_for('smalldrawer')}}">Return to Small Drawer View</a></center>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Office - Letter
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-6 mb-4 mt-4"><b>The Professor's Office - Letter from Synergy</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Office/letter.jpg')}}" alt="letter" width="1200" height="800"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>What does the professor have that got Synergy so worked up? Whatever it is, it was enough to get threatened by a powerful company. And Giovanni, what does he mean by "other measures"?</i></p>
+    </div>
+
+    <center><a href="{{url_for('office')}}">Return to Main Office View</a></center>
+{% endblock %}

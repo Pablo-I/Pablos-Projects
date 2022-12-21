@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Office - Couple Picture
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>The Professor's Office - Picture</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Office/couplepic.jpg')}}" alt="couplepic" width="475" height="650"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>I wonder who the people in the picture are? Old students maybe?</i></p>
+    </div>
+
+    <center><a href="{{url_for('office')}}">Return to Main Office View</a></center>
+{% endblock %}

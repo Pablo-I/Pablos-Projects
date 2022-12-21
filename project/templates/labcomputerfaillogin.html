@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <form action="computer" method="post">
+        <center><img src="{{url_for('static', filename='/images/Lab/computerloginfail.jpg')}}" alt="computer" width="1200" height="800"></center>
+        <div style="position:absolute; left:549px; top:685px;" class="w-25">
+            <input class="form-control mx-auto shadow p-2 bg-body rounded mb-4" id="code" name="code" autocomplete="off" placeholder="Enter Code" type="text">
+            <center><button class="btn btn-outline-light" type="submit">Login</button></center>
+        </div>
+    </form>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Dammit!</i></p>
+    </div>
+
+    <center><a href="{{url_for('lab')}}">Return to Main Lab View</a></center>
+{% endblock %}
