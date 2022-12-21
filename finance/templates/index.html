@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">TOTAL</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for element in sharesOwned %}
+                <tr>
+                    <td>{{ element["symbol"] }}</td>
+                    <td>{{ element["name"] }}</td>
+                    <td>{{ element["shares"] }}</td>
+                    <td>{{ usd(element["price"]) }}</td>
+                    <td>{{ usd(element["price"] * element["shares"]) }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfooter>
+            <tr>
+                <td colspan="3"></td>
+                <td><strong>Cash</strong></td>
+                <td>{{ usd(cash) }}</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td><strong>TOTAL</strong></td>
+                <td>{{ usd(total)}}</td>
+            </tr>
+        </tfooter>
+
+    </table>
+{% endblock %}
