@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Lab/computerprivfolder.jpg')}}" alt="privfolder" width="1200" height="800" usemap="#privfolder"></center>
+    <map name="privfolder">
+
+        <!--Apology Letter-->
+        <area class="default" shape="rect" coords="450,366,628,390" href="{{url_for('apologyletter')}}">
+
+        <!--Notepad-->
+        <area class="default" shape="rect" coords="450,438,490,419" href="{{url_for('note')}}">
+
+    </map>
+
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>The professor's private folder...Hopefully this solves the case, but I highly doubt it.</i></p>
+    </div>
+
+    <center><a href="{{url_for('computerhome')}}">Close File Explorer</a></center>
+{% endblock %}

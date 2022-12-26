@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Lab/computerfamilyfoldercabinplate.jpg')}}" alt="cabinplate" width="800" height="600"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Aha! That's like the <font color="jade">cabin's address</font>! I can just make out the print when zoomed in on the plate, and it looks like that place is not too far from here. I should probably check it out.</i></p>
+    </div>
+
+    <center><a href="{{url_for('cabinphoto')}}">Zoom Out</a></center>
+{% endblock %}

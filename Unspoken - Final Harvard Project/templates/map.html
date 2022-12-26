@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Map
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+
+    {% if placesDiscovered == 2 %}
+        <center><img src="{{url_for('static', filename='/images/Map/map2.jpg')}}" alt="map" width="1200" height="800" usemap="#map2"></center>
+        <map name = "map2">
+            <area shape="rect" coords="225,140,419,277" href="{{url_for('office')}}">
+            <area shape="rect" coords="752,220,922,373" href="{{url_for('lab')}}">
+        </map>
+    {% elif placesDiscovered == 3 %}
+    <center><img src="{{url_for('static', filename='/images/Map/map3.jpg')}}" alt="map" width="1200" height="800" usemap="#map3"></center>
+        <map name = "map3">
+            <area shape="rect" coords="225,140,419,277" href="{{url_for('office')}}">
+            <area shape="rect" coords="752,220,922,373" href="{{url_for('lab')}}">
+            <area shape="rect" coords="310,478,512,684" href="{{url_for('cabin')}}">
+        </map>
+    {% elif placesDiscovered == 4 %}
+        <center><img src="{{url_for('static', filename='/images/Map/map3.jpg')}}" alt="map" width="1200" height="800" usemap="#map3"></center>
+        <map name = "map3">
+            <area shape="rect" coords="225,140,419,277" href="{{url_for('office')}}">
+            <area shape="rect" coords="752,220,922,373" href="{{url_for('lab')}}">
+            <area shape="rect" coords="310,478,512,684" href="{{url_for('cabin')}}">
+        </map>
+    {% else %}
+        <center><img src="{{url_for('static', filename='/images/Map/map1.jpg')}}" alt="map" width="1200" height="800" usemap="#map1"></center>
+        <map name = "map1">
+            <area shape="rect" coords="230,140,425,280" href="{{url_for('office')}}">
+        </map>
+    {% endif %}
+{% endblock %}

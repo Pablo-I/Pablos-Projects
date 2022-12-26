@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Lab/computerfamilyfolder.jpg')}}" alt="familyfolder" width="1200" height="800" usemap="#familyfolder"></center>
+    <map name="familyfolder">
+
+        <!--Portrait of Beatrice-->
+        <area class="default" shape="rect" coords="454,350,535,372" href="{{url_for('beatriceportrait')}}" >
+
+        <!--Photo of Cabin-->
+        <area class="default" shape="rect" coords="454,375,590,395" href="{{url_for('cabinphoto')}}" >
+
+    </map>
+
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>The professor's family...Who knew that a mad scientist could have a heart.</i></p>
+    </div>
+
+    <center><a href="{{url_for('computerhome')}}">Close Family Folder</a></center>
+
+{% endblock %}

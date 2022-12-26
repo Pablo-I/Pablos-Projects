@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Office - Desk Clock
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-6 mb-4 mt-4"><b>The Professor's Office - Desk Clock</b></h1></center>
+    <center><img src="{{url_for('static', filename='/images/Office/deskclock.jpg')}}" alt="clock" width="700" height="800"></center>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>Hmmm, that's strange...I can hear the clock ticking but the hands don't appear to budge. Looks like they are fixed in place. Why would the professor keep a broken-down clock? Also, I can just make out what looks like engraved text along the rim of the clock. It reads: "time is a luxury you no longer have, Charlie Baxter".</i></p>
+    </div>
+
+    <center><a href="{{url_for('office')}}">Return to Main Office View</a></center>
+{% endblock %}

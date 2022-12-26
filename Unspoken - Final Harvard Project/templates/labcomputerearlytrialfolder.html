@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lab - Computer
+{% endblock %}
+
+{% block username %}
+    {{ username }}
+{% endblock %}
+
+
+{% block main %}
+    <center><h1 class=" display-5 mb-4 mt-4"><b>Synergy Lab - The Professor's Computer</b></h1></center>
+
+    <center><img src="{{url_for('static', filename='/images/Lab/computerearlytrialfolder.jpg')}}" alt="earlytrialfolder" width="1200" height="800" usemap="#earlytrialfolder"></center>
+    <map name="earlytrialfolder">
+
+        <!--New Mexico Accident Video-->
+        <area class="default" shape="rect" coords="453,347,728,368" href="{{url_for('newmexicoaccident')}}" >
+
+        <!--Nexus Beta Prototype-->
+        <area class="default" shape="rect" coords="453,373,590,394" href="{{url_for('nexusdrawing')}}" >
+
+
+    </map>
+
+    <div class="mx-auto mt-4 mb-4" style="width: 800px">
+        <p>[YOU] &#8594 <i>An early trial...of...what?</i></p>
+    </div>
+
+    <center><a href="{{url_for('computerhome')}}">Close File Finder</a></center>
+{% endblock %}
